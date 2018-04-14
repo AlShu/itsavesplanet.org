@@ -1,0 +1,10 @@
+version: '3.1'
+services:
+  itsavesplanet.org:
+    build: .
+    command:  bash -c "cd /opt/app && mix deps.get && mix phx.server"
+    volumes:
+      - .:/opt/app
+    ports:
+      - "5000:5000"
+
