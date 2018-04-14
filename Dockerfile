@@ -32,14 +32,12 @@ ENV PATH=./node_modules/.bin:$PATH \
 RUN mix local.hex --force && \
     mix local.rebar --force
 
-#    mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez
-
 
 EXPOSE 5000
 ENV PORT=5000 MIX_ENV=prod
 
-#WORKDIR /opt/app
-#
-#USER default
-#
+WORKDIR /opt/app
+
+USER default
+
 #CMD ["mix", "phx.server"]
