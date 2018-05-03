@@ -12,7 +12,7 @@ config :itsavesplanet_org, ITSPWeb.Endpoint,
   code_reloader: true,
   check_origin: false,
   watchers: [
-    node: ["node_modules/webpack/bin/webpack.js", "--watch-stdin", "--progress", "--colors"]
+    node: ["node_modules/webpack/bin/webpack.js", "--watch-stdin", "--progress", "--colors", "--mode", "development"]
   ]
 
 # ## SSL Support
@@ -38,7 +38,7 @@ config :itsavesplanet_org, ITSPWeb.Endpoint,
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
       ~r{lib/itsavesplanet_org_web/views/.*(ex)$},
-      ~r{lib/itsavesplanet_org_web/templates/.*(eex)$}
+      ~r{lib/itsavesplanet_org_web/templates/.*(eex|slim|slime)$}
     ]
   ]
 

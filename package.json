@@ -33,6 +33,7 @@
     "file-loader": "^1.1.11",
     "font-awesome": "^4.7.0",
     "jquery": "3.X",
+    "jquery-ui-bundle": "^1.12.1-migrate",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.8.3",
     "popper.js": "^1.14.3",

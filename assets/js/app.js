@@ -6,12 +6,17 @@
 
 // import socket from "./socket"
 import "../css/app.sass"
+// import  "../static/robots.txt"
+// import  "../static/favicon.ico"
+
 
 
 // import 'jquery'
 // import 'ramda'
 import 'popper.js'
 import 'bootstrap'
+require('./theme.js');
 
 window.$ = window.JQuery = require("jquery");
 window.R = require("ramda");
+
