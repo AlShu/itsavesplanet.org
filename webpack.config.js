@@ -1,7 +1,14 @@
+const env = process.env.MIX_ENV === 'prod' ? 'production' : 'development'
+const webpack = require('webpack')
 const {resolve} = require('path')
+const path = require('path')
+
 const autoprefixer = require('autoprefixer')
 //const normalize = require('postcss-normalize')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const eslintFormatter = require('react-dev-utils/eslintFormatter');
+
 
 const {
   HotModuleReplacementPlugin,
@@ -22,8 +29,11 @@ const cssLoader = [
 
 const babelLoader = {
   loader: 'babel-loader',
-//  options: {
-//    presets: [
+  options: {
+    presets: [
+      'env',
+      'es2015',
+      'react',
 //      ['@babel/env', {
 //        loose: true,
 //        useBuiltIns: 'entry',
@@ -32,10 +42,11 @@ const babelLoader = {
 //          browsers: browsersList,
 //        },
 //      }],
-//    ],
-//    //plugins: [
-//    //  '@babel/transform-runtime',
-//    //],
+   ],
+   plugins: [
+   //  '@babel/transform-runtime',
+   //   "react-hot-loader/babel"
+   ],
 //    env: {
 //      production: {
 //        presets: [
@@ -46,7 +57,7 @@ const babelLoader = {
 //        ],
 //      },
 //    },
-//  },
+  },
 }
 
 module.exports = {
@@ -70,6 +81,21 @@ module.exports = {
 
   module: {
     rules: [
+      // {
+      //   test: /\.(js|jsx|mjs)$/,
+      //   enforce: 'pre',
+      //   use: [
+      //     {
+      //       options: {
+      //         formatter: eslintFormatter,
+      //         eslintPath: require.resolve('eslint'),
+      //
+      //       },
+      //       loader: require.resolve('eslint-loader'),
+      //     },
+      //   ],
+      //   // include: paths.appSrc,
+      // },
       {
         include: /assets\/static/,
         use: [
@@ -83,7 +109,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.js?x$/,
+        test: /\.(js|jsx|mjs)$/,
         exclude: /node_modules|assets\/static/,
         use: babelLoader,
       },
@@ -162,10 +188,14 @@ module.exports = {
     ]
   },
   plugins: [
-    //new HtmlWebPackPlugin({
-    //  template: "./src/index.html",
-    //  filename: "./index.html"
-    //}),
+    new CleanWebpackPlugin([
+      path.join(__dirname, 'priv/static')
+    ]),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(env)
+      }
+    }),
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
       chunkFilename: "css/[name]-[id].css"

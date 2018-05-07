@@ -15,7 +15,8 @@ import "../css/app.sass"
 // import 'ramda'
 import 'popper.js'
 import 'bootstrap'
-require('./theme.js');
+require('./theme.js')
+require('./react/app.jsx')
 
 window.$ = window.JQuery = require("jquery");
 window.R = require("ramda");
