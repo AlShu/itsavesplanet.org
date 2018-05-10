@@ -1,11 +1,11 @@
-FROM bitwalker/alpine-elixir:1.6.4
+FROM bitwalker/alpine-elixir:1.6.5
 
 
 # Important!  Update this no-op ENV variable when this Dockerfile
 # is updated with the current date. It will force refresh of all
 # of the base images and things like `apt-get update` won't be using
 # old cached versions when the Dockerfile is built.
-ENV REFRESHED_AT=2018-04-14 \
+ENV REFRESHED_AT=2018-05-10 \
     # Set this so that CTRL+G works properly
     TERM=xterm
 
@@ -13,7 +13,11 @@ ENV REFRESHED_AT=2018-04-14 \
 # Install NPM
 RUN \
     mkdir -p /opt/app && \
+    mkdir -p /opt/hex && \
+    mkdir -p /opt/mix && \
     chmod -R 777 /opt/app && \
+    chmod -R 777 /opt/hex && \
+    chmod -R 777 /opt/mix && \
     apk update && \
     apk --no-cache --update add \
       git make g++ wget curl inotify-tools \

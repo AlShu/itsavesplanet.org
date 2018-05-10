@@ -1,10 +1,14 @@
 version: '3.1'
 services:
+  itsp_db:
+    image: postgres:10.3-alpine
   itsavesplanet.org:
-    build: .
+    build: . 
     command:  bash -c "cd /opt/app && mix deps.get && mix phx.server"
     volumes:
       - .:/opt/app
     ports:
       - "5000:5000"
-
+    depends_on:
+      - itsp_db
+       
