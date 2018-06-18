@@ -8,6 +8,7 @@ defmodule ITSP.Application do
 
     # Define workers and child supervisors to be supervised
     children = [
+      supervisor(ITSP.Repo, []),
       # Start the endpoint when the application starts
       supervisor(ITSPWeb.Endpoint, []),
       # Start your own worker by calling: ITSP.Worker.start_link(arg1, arg2, arg3)

@@ -59,6 +59,14 @@ config :logger, level: :info
 #     config :itsavesplanet_org, ITSPWeb.Endpoint, server: true
 #
 
+config :itsavesplanet_org, ITSP.Repo,
+       adapter: Ecto.Adapters.Postgres,
+       url: System.get_env("DATABASE_URL"),
+       pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
+       ssl: false
+
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
 import_config "prod.secret.exs"
+
+

@@ -1,0 +1,5 @@
+<h2>New Samples</h2>
+
+<%= render "form.html", Map.put(assigns, :action, litering_samples_path(@conn, :create)) %>
+
+<span><%= link "Back", to: litering_samples_path(@conn, :index) %></span>

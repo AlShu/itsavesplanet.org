@@ -19,7 +19,7 @@ defmodule ITSP.Mixfile do
   def application do
     [
       mod: {ITSP.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :postgrex, :ecto]
     ]
   end
 
@@ -38,7 +38,10 @@ defmodule ITSP.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:phoenix_slime, "~> 0.9.0"}
+      {:phoenix_slime, "~> 0.9.0"},
+      {:postgrex, ">= 0.0.0"},
+      {:ecto, "~> 2.2.10"},
+      {:distillery, ">= 0.0.0"}
     ]
   end
 end

@@ -1,0 +1,5 @@
+<h2>Edit Samples</h2>
+
+<%= render "form.html", Map.put(assigns, :action, recycling_samples_path(@conn, :update, @samples)) %>
+
+<span><%= link "Back", to: recycling_samples_path(@conn, :index) %></span>

@@ -1,8 +1,9 @@
+/https://blackrockdigital.github.io/startbootstrap-agency/#
 nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
   .container
     a.navbar-brand.js-scroll-trigger href="#page-top"
       | Start Bootstrap
-    button.navbar-toggler.navbar-toggler-right(      aria-controls="navbarResponsive"      aria-expanded="false"      aria-label="Toggle navigation"      data-target="#navbarResponsive"      data-toggle="collapse"      type="button"    )
+    button.navbar-toggler.navbar-toggler-right aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarResponsive" data-toggle="collapse" type="button"
       | Menu
       i.fa.fa-bars
     #navbarResponsive.collapse.navbar-collapse
@@ -11,8 +12,8 @@ nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
           a.nav-link.js-scroll-trigger href="#services"
             | Services
         li.nav-item
-          a.nav-link.js-scroll-trigger href="#portfolio"
-            | Portfolio
+          a.nav-link.js-scroll-trigger href="#projects"
+            | projects
         li.nav-item
           a.nav-link.js-scroll-trigger href="#about"
             | About
@@ -58,70 +59,70 @@ section#services
         h4.service-heading Web Security
         p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
 
-/ /! Portfolio Grid
-/ section#portfolio.bg-light
-/   .container
-/     .row
-/       .col-lg-12.text-center
-/         h2.section-heading.text-uppercase Portfolio
-/         h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
-/     .row
-/       .col-md-4.col-sm-6.portfolio-item
-/         a.portfolio-link data-toggle="modal" href="#portfolioModal1"
-/         .portfolio-hover
-/           .portfolio-hover-content
-/             i.fa.fa-plus.fa-3x
-/         img.img-fluid alt="" src="img/portfolio/01-thumbnail.jpg" /
-/         .portfolio-caption
-/           h4 Threads
-/           p.text-muted Illustration
-/       .col-md-4.col-sm-6.portfolio-item
-/         a.portfolio-link data-toggle="modal" href="#portfolioModal2"
-/         .portfolio-hover
-/           .portfolio-hover-content
-/             i.fa.fa-plus.fa-3x
-/         img.img-fluid alt="" src="img/portfolio/02-thumbnail.jpg" /
-/         .portfolio-caption
-/           h4 Explore
-/           p.text-muted Graphic Design
-/       .col-md-4.col-sm-6.portfolio-item
-/         a.portfolio-link data-toggle="modal" href="#portfolioModal3"
-/         .portfolio-hover
-/           .portfolio-hover-content
-/             i.fa.fa-plus.fa-3x
-/         img.img-fluid alt="" src="img/portfolio/03-thumbnail.jpg" /
-/         .portfolio-caption
-/           h4 Finish
-/           p.text-muted Identity
-/       .col-md-4.col-sm-6.portfolio-item
-/         a.portfolio-link data-toggle="modal" href="#portfolioModal4"
-/         .portfolio-hover
-/           .portfolio-hover-content
-/             i.fa.fa-plus.fa-3x
-/         img.img-fluid alt="" src="img/portfolio/04-thumbnail.jpg" /
-/         .portfolio-caption
-/           h4 Lines
-/           p.text-muted Branding
-/       .col-md-4.col-sm-6.portfolio-item
-/         a.portfolio-link data-toggle="modal" href="#portfolioModal5"
-/         .portfolio-hover
-/           .portfolio-hover-content
-/             i.fa.fa-plus.fa-3x
-/         img.img-fluid alt="" src="img/portfolio/05-thumbnail.jpg" /
-/         .portfolio-caption
-/           h4 Southwest
-/           p.text-muted Website Design
-/       .col-md-4.col-sm-6.portfolio-item
-/         a.portfolio-link data-toggle="modal" href="#portfolioModal6"
-/         .portfolio-hover
-/           .portfolio-hover-content
-/             i.fa.fa-plus.fa-3x
-/         img.img-fluid alt="" src="img/portfolio/06-thumbnail.jpg" /
-/         .portfolio-caption
-/           h4 Window
-/           p.text-muted Photography
-/
-/! About
+/! projects Grid
+section#projects.bg-light
+  .container
+    .row
+      .col-lg-12.text-center
+        h2.section-heading.text-uppercase projects
+        h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+    .row
+      .col-md-4.col-sm-6.project-item
+        a.project-link href="#projectModal1"
+        .project-hover
+          .project-hover-content
+            i.fa.fa-plus.fa-3x
+        img.img-fluid alt="" src="img/project/01-thumbnail.jpg" /
+        .project-caption
+          h4 Threads
+          p.text-muted Illustration
+      .col-md-4.col-sm-6.project-item
+        a.project-link data-toggle="modal" href="#projectModal2"
+        .project-hover
+          .project-hover-content
+            i.fa.fa-plus.fa-3x
+        img.img-fluid alt="" src="img/project/02-thumbnail.jpg" /
+        .project-caption
+          h4 Explore
+          p.text-muted Graphic Design
+      .col-md-4.col-sm-6.project-item
+        a.project-link data-toggle="modal" href="#projectModal3"
+        .project-hover
+          .project-hover-content
+            i.fa.fa-plus.fa-3x
+        img.img-fluid alt="" src="img/project/03-thumbnail.jpg" /
+        .project-caption
+          h4 Finish
+          p.text-muted Identity
+      .col-md-4.col-sm-6.project-item
+        a.project-link data-toggle="modal" href="#projectModal4"
+        .project-hover
+          .project-hover-content
+            i.fa.fa-plus.fa-3x
+        img.img-fluid alt="" src="img/project/04-thumbnail.jpg" /
+        .project-caption
+          h4 Lines
+          p.text-muted Branding
+      .col-md-4.col-sm-6.project-item
+        a.project-link data-toggle="modal" href="#projectModal5"
+        .project-hover
+          .project-hover-content
+            i.fa.fa-plus.fa-3x
+        img.img-fluid alt="" src="img/project/05-thumbnail.jpg" /
+        .project-caption
+          h4 Southwest
+          p.text-muted Website Design
+      .col-md-4.col-sm-6.project-item
+        a.project-link data-toggle="modal" href="#projectModal6"
+        .project-hover
+          .project-hover-content
+            i.fa.fa-plus.fa-3x
+        img.img-fluid alt="" src="img/project/06-thumbnail.jpg" /
+        .project-caption
+          h4 Window
+          p.text-muted Photography
+
+/ ! About
 section#about
   .container
     .row
@@ -278,6 +279,7 @@ section#contact
 section#react-app-section
   .container
     #react-app
+
 .container
   main(role="main")
     h1 class="my-4"

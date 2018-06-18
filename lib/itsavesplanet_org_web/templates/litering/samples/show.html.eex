@@ -1,0 +1,8 @@
+<h2>Show Samples</h2>
+
+<ul>
+
+</ul>
+
+<span><%= link "Edit", to: litering_samples_path(@conn, :edit, @samples) %></span>
+<span><%= link "Back", to: litering_samples_path(@conn, :index) %></span>

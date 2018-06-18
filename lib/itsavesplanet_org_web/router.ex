@@ -17,6 +17,12 @@ defmodule ITSPWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    scope "/litering", as: :litering do
+      resources "/samples", Litering.SamplesController
+    end
+    scope "/recycling", as: :recycling do
+      resources "/samples", Recycling.SamplesController
+    end
   end
 
   # Other scopes may use custom stacks.
